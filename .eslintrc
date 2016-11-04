@@ -1,0 +1,27 @@
+{
+  "engine": "babel-eslint",
+  "extends": [
+    "standard"
+  ],
+  "plugins": [
+    "promise"
+  ],
+  "globals": {
+    "__DEV__": false
+  },
+  "env": {
+    "browser": true,
+    "amd": true,
+    "commonjs": true
+  },
+  "rules": {
+    "max-len": [2, 120, 2],
+    "semi": [2, "always"],
+    "curly": ["error", "all"],
+    "indent": ["error", 2, {"SwitchCase": 1}],
+    "brace-style": ["error", "1tbs"],
+    "space-before-function-paren": ["error", { "anonymous": "ignore", "named": "ignore" }],
+    "quotes": [2, "single"],
+    "object-curly-spacing" : [2, "always"]
+  }
+}
