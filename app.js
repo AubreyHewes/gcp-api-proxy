@@ -32,7 +32,7 @@ router.get('/', (ctx, next) => {
   ctx.body = 'BEACHES';
 });
 
-router.get('/api/:endpoint', gcpApiProxy).post('/api/:endpoint', gcpApiProxy);
+router.get('/cloudprint/:endpoint', gcpApiProxy).post('/cloudprint/:endpoint', gcpApiProxy);
 
 // // public files
 //
