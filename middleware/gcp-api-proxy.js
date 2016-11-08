@@ -1,10 +1,13 @@
 import fetch from 'node-fetch';
 
 const gcpApiProxy = async (ctx, next) => {
+  const start = new Date();
+
   if (!ctx.request.query || !ctx.request.query.access_token) {
     ctx.body = { 'success': false, 'message': 'access_token is not set' };
     return;
   }
+
   await fetch('https://www.google.com/cloudprint/' + ctx.params.endpoint + '?' + ctx.request.querystring, {
     method: ctx.request.method,
     headers: {
@@ -21,6 +24,7 @@ const gcpApiProxy = async (ctx, next) => {
     // ctx.body = { 'success': false, 'message': err.message };
     throw err;
   });
+  ctx.set('X-GCP-Response-Time', `${new Date() - start}ms`);
 };
 
 export default gcpApiProxy;
