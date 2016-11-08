@@ -18,6 +18,7 @@ const gcpApiProxy = async (ctx, next) => {
   }).then((body) => {
     ctx.body = body;
   }).catch((err) => {
+    // ctx.body = { 'success': false, 'message': err.message };
     throw err;
   });
 };
