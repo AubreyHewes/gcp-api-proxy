@@ -18,6 +18,7 @@
     "debug": "~2.3.0",
     "express": "~4.14.0",
     "hbs": "~4.0.1",
+    "kcors": "next",
     "koa": "next",
     "koa-router": "next",
     "koa-static": "next",

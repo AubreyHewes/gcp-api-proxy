@@ -10,8 +10,13 @@ const gcpApiProxy = async (ctx, next) => {
     headers: {
       'X-CloudPrint-Proxy': 'gcp-api-proxy/0.0.1 (+https://github.com/AubreyHewes/gcp-api-proxy)'
     }
-  }).then((res) => res.json()).then((json) => {
-    ctx.body = json;
+  }).then((res) => {
+    if (res.status !== 200) {
+      return { 'success': false, 'message': res.statusText };
+    }
+    return res.json();
+  }).then((body) => {
+    ctx.body = body;
   }).catch((err) => {
     throw err;
   });

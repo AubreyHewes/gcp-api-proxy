@@ -1,11 +1,13 @@
 // import path from 'path';
 import Koa from 'koa';
 // import KoaStatic from 'koa-static';
+import cors from 'kcors';
 import Router from 'koa-router';
 import gcpApiProxy from './middleware/gcp-api-proxy';
-
 const app = new Koa();
 app.keys = ['don\'t be eval', 'ugly like a turtle'];
+
+app.use(cors());
 
 // x-response-time
 
