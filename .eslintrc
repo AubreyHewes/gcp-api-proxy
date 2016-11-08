@@ -1,18 +1,18 @@
 {
-  "engine": "babel-eslint",
+  "parser": "babel-eslint",
   "extends": [
     "standard"
   ],
   "plugins": [
-    "promise"
+    "babel",
+    "promise",
+    "standard"
   ],
   "globals": {
     "__DEV__": false
   },
   "env": {
-    "browser": true,
-    "amd": true,
-    "commonjs": true
+    "shared-node-browser": true
   },
   "rules": {
     "max-len": [2, 120, 2],

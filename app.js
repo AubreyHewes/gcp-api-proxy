@@ -1,6 +1,6 @@
-import path from 'path';
+// import path from 'path';
 import Koa from 'koa';
-import KoaStatic from 'koa-static';
+// import KoaStatic from 'koa-static';
 import Router from 'koa-router';
 import gcpApiProxy from './middleware/gcp-api-proxy';
 
