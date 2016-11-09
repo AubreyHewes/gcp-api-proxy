@@ -25,6 +25,7 @@
     "hbs": "~4.0.1",
     "kcors": "next",
     "koa": "next",
+    "koa-bodyparser": "next",
     "koa-router": "next",
     "koa-static": "next",
     "morgan": "~1.7.0",
